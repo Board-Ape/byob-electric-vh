@@ -1,4 +1,4 @@
-[
+module.exports = [
   {
     "companyName": "ZB Homes (BOP)",
     "industry": "Construction",

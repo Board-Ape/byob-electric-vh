@@ -1,4 +1,4 @@
-[
+module.exports = [
   {
     "branchName": "ZB Homes (BOP)",
     "employees": "Construction",
