@@ -55,7 +55,7 @@ app.post('/api/v1/companies', (request, response) => {
     });
 });
 
-app.post('/api/v1/branches', (request, response) => {
+app.post('/api/v1/branches', (request, response) => {//need to post to specific id
   const branch = request.body;
   for (let requiredParameters of ["companyName", "employees", "location", "grossRevenue"]) {
     if (!branch[requiredParameters]) {
@@ -73,14 +73,43 @@ app.post('/api/v1/branches', (request, response) => {
     });
 });
 
+// app.get(`/api/v1/companies?revenueGrowth=`, (request, response) => { //query parameters
 
-app.delete('/api/v1/companies/:id', (request, response) => {
-  const id = request.params;
+// })
 
-  database('topcompanies').where(id).del()
-    .then(company => {
-      if(!company) {
-        response.status(422).json({ error: 'This project does not exist'})
+app.patch('/api/v1/branches/:id', (request, response) => {
+  database('branches')
+    .where({company_id: request.params.id})
+    .update(request.body, '')
+    .then(update => {
+      if(!update) {
+        return response.sendStatus(404).json({error: 'Could not update branch'})
+      } else {
+        response.sendStatus(204)
+      }
+    })
+      .catch(error => {
+        response.status(500).json({ error })
+      })
+})
+
+app.get('/api/v1/branches/:id', (request, response) => {
+  database('branches')
+    .where({ company_id: request.params.id}).select()
+    .then(branch => {
+      response.status(200).json(branch);
+    })
+    .catch(error => {
+      response.status(500).json({ error });
+    });
+});
+
+app.delete('/api/v1/branches/:id', (request, response) => {
+  const {id} = request.params;
+  database('branches').where({id}).del()
+    .then(branch => {
+      if(!branch) {
+        response.status(422).json({error: 'This Branch does not exist'})
       } else {
         response.sendStatus(204)
       }
@@ -88,12 +117,23 @@ app.delete('/api/v1/companies/:id', (request, response) => {
     .catch(error => response.status(500).json({ error }))
 })
 
-app.delete('/api/v1/companies/branches/:id', (response,status) => {
-  const id = request.params;
-
-  database('branches').where(id).del()
+app.get('/api/v1/companies/:id', (request, response) => {
+  database('topcompanies')
+    .where({ id: request.params.id}).select()
     .then(branch => {
-      if(!branches) {
+      response.status(200).json(branch);
+    })
+    .catch(error => {
+      response.status(500).json({ error });
+    });
+});
+
+app.delete('/api/v1/companies/:id', (request, response) => {
+  const {id} = request.params;
+  console.log(request)
+  database('topcompanies').where({id}).del()
+    .then(companies => {
+      if(!companies) {
         response.status(422).json({error: 'This Branch does not exist'})
       } else {
         response.sendStatus(204)
