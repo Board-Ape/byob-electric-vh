@@ -1,5 +1,5 @@
-const companyDataArray = require('../../../company-names.json');
-const branchDataArray = require('../../../branches.json');
+const companyDataArray = require("../../../company-names.js");
+const branchDataArray = require("../../../branches.js");
 
 const createCompany = (knex, companyTitle) => {
   return knex("topcompanies").insert({
@@ -8,14 +8,40 @@ const createCompany = (knex, companyTitle) => {
     location: companyTitle.location,
     revenueGrowth: companyTitle.revenueGrowth
   }, "id")
-  .then(branchID => {
-    let companyArray = [];
-    let filteredArray = branchDataArray.filter(company => {
-      company.companyName === companyTitle.companyName
+    .then(branchID => {
+      let companyArray = [];
+      let filteredArray = branchDataArray.filter(company =>
+        company.companyName === companyTitle.companyName
+      );
+      filteredArray.forEach(filteredBranches => {
+        companyArray.push(createBranch(knex, {
+          companyName: JSON.stringify(filteredBranches.companyName),
+          employees: JSON.stringify(filteredBranches.employees),
+          location: JSON.stringify(filteredBranches.location),
+          grossRevenue: JSON.stringify(filteredBranches.grossRevenue),
+          company_id: branchID[0]
+        }));
+      });
+      return Promise.all(companyArray);
     });
-  })
-}
+};
 
+const createBranch = (knex, branch) => {
+  return knex("branches").insert(branch);
+};
+
+exports.seed = (knex, Promise) => {
+  return knex("branches").del()
+    .then(() => knex("topcompanies").del())
+    .then(() => {
+      let companyPromises = [];
+      companyDataArray.forEach(company => {
+        companyPromises.push(createCompany(knex, company));
+      });
+      return Promise.all(companyPromises);
+    })
+    .catch(error => console.log(`Error seeding data: ${error}`));
+};
 
 
 // const createCompany = (knex, company) => (
