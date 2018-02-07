@@ -27,6 +27,64 @@ app.get('/api/v1/companies', (request, response) => {
     });
 });
 
+app.get('/api/v1/branches', (request, response) => {
+  database('branches').select()
+    .then(branches => {
+      response.status(200).json(branches);
+    })
+    .catch(error => {
+      response.status(500).json(branches)
+    })
+})
+
+app.post('/api/v1/companies', (request, response) => {
+  const company = request.params;
+  for(let requiredParameters of ['name']) {
+    if(!company[requiredParameters]) {
+      return response.status(422).json({
+        error: `You are missing a required field ${requiredParameters}`
+      })
+    }
+  }
+  database('topcompanies').insert(company, 'id')
+    .then(company => {
+      return response.status(201).json({ id: company[0] })
+    })
+    .catch(error => {
+      return response.status(500).json({ error })
+    })
+})
+
+app.delete('/api/v1/companies/:id', (request, response) => {
+  const id = request.params;
+
+  database('topcompanies').where(id).del()
+    .then(company => {
+      if(!company) {
+        response.status(422).json({ error: 'This project does not exist'})
+      } else {
+        response.sendStatus(204)
+      }
+    })
+    .catch(error => response.status(500).json({ error }))
+})
+
+app.delete('/api/v1/companies/branches/:id', (response,status) => {
+  const id = request.params;
+
+  database('branches').where(id).del()
+    .then(branch => {
+      if(!branches) {
+        response.status(422).json({error: 'This Branch does not exist'})
+      } else {
+        response.sendStatus(204)
+      }
+    })
+    .catch(error => response.status(500).json({ error }))
+})
+
 app.listen(app.get('port'), () => {
   console.log(`${app.locals.title} is running on ${app.get("port")}.`)
 });
+
+module.exports = app;
