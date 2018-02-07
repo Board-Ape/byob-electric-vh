@@ -11,7 +11,7 @@ exports.up = (knex, Promise) => {
 
     knex.schema.createTable('branches', (table) => {
       table.increments('id').primary();
-      table.string('branchName');
+      table.string('companyName');
       table.string('employees');
       table.string('location');
       table.string('grossRevenue');
