@@ -1,0 +1,303 @@
+[
+  {
+    "branchName": "ZB Homes (BOP)",
+    "employees": "Construction",
+    "location": "Waikato and Central North Island",
+    "grossRevenue": "1583%",
+    "company_id": 1
+  },
+  {
+    "branchName": "Moola.co.nz",
+    "employees": "Financial services",
+    "location": "Canterbury and Upper South Island",
+    "grossRevenue": "1013%",
+    "company_id": 2
+  },
+  {
+    "branchName": "Crimson Education",
+    "employees": "Education",
+    "location": "Auckland and Upper North Island",
+    "grossRevenue": "1005%",
+    "company_id": 3
+  },
+  {
+    "branchName": "Pushpay",
+    "employees": "Technology",
+    "location": "Auckland and Upper North Island",
+    "grossRevenue": "914%",
+    "company_id": 4
+  },
+  {
+    "branchName": "Carus Group",
+    "employees": "Construction",
+    "location": "Canterbury and Upper South Island",
+    "grossRevenue": "718%",
+    "company_id": 5
+  },
+  {
+    "branchName": "The Career Academy",
+    "employees": "Education",
+    "location": "Auckland and Upper North Island",
+    "grossRevenue": "678%",
+    "company_id": 6
+  },
+  {
+    "branchName": "StretchSense",
+    "employees": "Technology",
+    "location": "Auckland and Upper North Island",
+    "grossRevenue": "554%",
+    "company_id": 6
+  },
+  {
+    "branchName": "Turbo Staff",
+    "employees": "Recruitment",
+    "location": "Canterbury and Upper South Island",
+    "grossRevenue": "534%",
+    "company_id": 5
+  },
+  {
+    "branchName": "Nurtured at Home",
+    "employees": "Education",
+    "location": "Waikato and Central North Island",
+    "grossRevenue": "480%",
+    "company_id": 7
+  },
+  {
+    "branchName": "Blue River Dairy LP",
+    "employees": "Agribusiness",
+    "location": "Otago and Southland",
+    "grossRevenue": "445%",
+    "company_id": 8
+  },
+  {
+    "branchName": "Tower Cranes NZ",
+    "employees": "Construction",
+    "location": "Auckland and Upper North Island",
+    "grossRevenue": "435%",
+    "company_id": 8
+  },
+  {
+    "branchName": "API Talent",
+    "employees": "Professional services",
+    "location": "Wellington and Lower North Island",
+    "grossRevenue": "408%",
+    "company_id": 9
+  },
+  {
+    "branchName": "New Y Trading",
+    "employees": "Distribution and logistics",
+    "location": "Auckland and Upper North Island",
+    "grossRevenue": "391%",
+    "company_id": 10
+  },
+  {
+    "branchName": "Tenco EBS",
+    "employees": "Professional services",
+    "location": "Canterbury and Upper South Island",
+    "grossRevenue": "381%",
+    "company_id": 10
+  },
+  {
+    "branchName": "Timely",
+    "employees": "Technology",
+    "location": "Otago and Southland",
+    "grossRevenue": "379%",
+    "company_id": 10
+  },
+  {
+    "branchName": "Inde",
+    "employees": "Professional services",
+    "location": "Canterbury and Upper South Island",
+    "grossRevenue": "377%",
+    "company_id": 11
+  },
+  {
+    "branchName": "90 Seconds",
+    "employees": "Technology",
+    "location": "Auckland and Upper North Island",
+    "grossRevenue": "357%",
+    "company_id": 12
+  },
+  {
+    "branchName": "Roam Creative",
+    "employees": "Technology",
+    "location": "Auckland and Upper North Island",
+    "grossRevenue": "354%",
+    "company_id": 13
+  },
+  {
+    "branchName": "Shuttlerock",
+    "employees": "Technology",
+    "location": "Auckland and Upper North Island",
+    "grossRevenue": "349%",
+    "company_id": 13
+  },
+  {
+    "branchName": "Pacific Edge",
+    "employees": "Healthcare",
+    "location": "Otago and Southland",
+    "grossRevenue": "324%",
+    "company_id": 14
+  },
+  {
+    "branchName": "FaceMe",
+    "employees": "Technology",
+    "location": "Auckland and Upper North Island",
+    "grossRevenue": "317%",
+    "company_id": 15
+  },
+  {
+    "branchName": "Snap Rentals",
+    "employees": "Tourism",
+    "location": "Auckland and Upper North Island",
+    "grossRevenue": "315%",
+    "company_id": 16
+  },
+  {
+    "branchName": "New Zealand Health Manufacturing",
+    "employees": "Manufacturing",
+    "location": "Auckland and Upper North Island",
+    "grossRevenue": "314%",
+    "company_id": 16
+  },
+  {
+    "branchName": "Spotlight Reporting",
+    "employees": "Technology",
+    "location": "Wellington and Lower North Island",
+    "grossRevenue": "300%",
+    "company_id": 17
+  },
+  {
+    "branchName": "Rabid Technologies",
+    "employees": "Technology",
+    "location": "Wellington and Lower North Island",
+    "grossRevenue": "300%",
+    "company_id": 18
+  },
+  {
+    "branchName": "Raw Material",
+    "employees": "Wholesale Trade",
+    "location": "Wellington and Lower North Island",
+    "grossRevenue": "287%",
+    "company_id": 19
+  },
+  {
+    "branchName": "Acquire Online",
+    "employees": "Advertising",
+    "location": "Auckland and Upper North Island",
+    "grossRevenue": "272%",
+    "company_id": 20
+  },
+  {
+    "branchName": "Protempo",
+    "employees": "Wholesale Trade",
+    "location": "Auckland and Upper North Island",
+    "grossRevenue": "242%",
+    "company_id": 21
+  },
+  {
+    "branchName": "Teknique",
+    "employees": "Technology",
+    "location": "Auckland and Upper North Island",
+    "grossRevenue": "234%",
+    "company_id": 21
+  },
+  {
+    "branchName": "Ecoware",
+    "employees": "Wholesale Trade",
+    "location": "Auckland and Upper North Island",
+    "grossRevenue": "232%",
+    "company_id": 22
+  },
+  {
+    "branchName": "Ecoware",
+    "employees": "Wholesale Trade",
+    "location": "Auckland and Upper North Island",
+    "grossRevenue": "232%",
+    "company_id": 22
+  },
+  {
+    "branchName": "Ecoware",
+    "employees": "Wholesale Trade",
+    "location": "Auckland and Upper North Island",
+    "grossRevenue": "232%",
+    "company_id": 23
+  },
+  {
+    "branchName": "Ecoware",
+    "employees": "Wholesale Trade",
+    "location": "Auckland and Upper North Island",
+    "grossRevenue": "232%",
+    "company_id": 24
+  },
+  {
+    "branchName": "Ecoware",
+    "employees": "Wholesale Trade",
+    "location": "Auckland and Upper North Island",
+    "grossRevenue": "232%",
+    "company_id": 25
+  },
+  {
+    "branchName": "Ecoware",
+    "employees": "Wholesale Trade",
+    "location": "Auckland and Upper North Island",
+    "grossRevenue": "232%",
+    "company_id": 25
+  },
+  {
+    "branchName": "Ecoware",
+    "employees": "Wholesale Trade",
+    "location": "Auckland and Upper North Island",
+    "grossRevenue": "232%",
+    "company_id": 25
+  },
+  {
+    "branchName": "Ecoware",
+    "employees": "Wholesale Trade",
+    "location": "Auckland and Upper North Island",
+    "grossRevenue": "232%",
+    "company_id": 26
+  },
+  {
+    "branchName": "Ecoware",
+    "employees": "Wholesale Trade",
+    "location": "Auckland and Upper North Island",
+    "grossRevenue": "232%",
+    "company_id": 27
+  },
+  {
+    "branchName": "Ecoware",
+    "employees": "Wholesale Trade",
+    "location": "Auckland and Upper North Island",
+    "grossRevenue": "232%",
+    "company_id": 27
+  },
+  {
+    "branchName": "Ecoware",
+    "employees": "Wholesale Trade",
+    "location": "Auckland and Upper North Island",
+    "grossRevenue": "232%",
+    "company_id": 27
+  },
+  {
+    "branchName": "Ecoware",
+    "employees": "Wholesale Trade",
+    "location": "Auckland and Upper North Island",
+    "grossRevenue": "232%",
+    "company_id": 28
+  },
+  {
+    "branchName": "Ecoware",
+    "employees": "Wholesale Trade",
+    "location": "Auckland and Upper North Island",
+    "grossRevenue": "232%",
+    "company_id": 29
+  },
+  {
+    "branchName": "Ecoware",
+    "employees": "Wholesale Trade",
+    "location": "Auckland and Upper North Island",
+    "grossRevenue": "232%",
+    "company_id": 30
+  }
+]
