@@ -6,19 +6,17 @@ exports.up = (knex, Promise) => {
       table.string('industry');
       table.string('location');
       table.string('revenueGrowth');
-
       table.timestamps(true, true);
-    }), 
+    }),
 
     knex.schema.createTable('branches', (table) => {
       table.increments('id').primary();
-      table.string('branchName');
+      table.string('companyName');
       table.string('employees');
       table.string('location');
       table.string('grossRevenue');
       table.integer('company_id').unsigned();
       table.foreign('company_id').references('topcompanies.id');
-
       table.timestamps(true, true);
     }),
 
