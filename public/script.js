@@ -1,27 +1,24 @@
 const userAuth = async () => {
-  const email = $('#email').val;
-  const appname = $('#appname').val;
+  const email = document.querySelector('.email').value;
+  const appName = document.querySelector('.appName').value;
   const postUser = await fetch('/api/v1/authenticate', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify({
-      email: email,
-      appname: appname
+      email,
+      appName
     })
   });
 
   const jwt = await postUser.json();
-  saveJWTtoLS(jwt);
+  $(".display-jwt").append(`<div>${jwt.token}</div>`);
   return jwt;
 };
 
-const saveJWTtoLS = (jwt) => {
-  localStorage.setItem('A-TEAM', jwt);
-};
-
-document.querySelector('#submit').addEventListener('click', (event) => {
+document.querySelector('.submit').addEventListener('click', (event) => {
   event.preventDefault();
   userAuth();
+
 });
