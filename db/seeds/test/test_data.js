@@ -21,14 +21,14 @@ exports.seed = function(knex, Promise) {
               employees: '1200', 
               location: 'New South Wales', 
               grossRevenue: '1,200,000',
-              projects_id: branches[0]
+              company_id: branches[0]
             },
             {
               companyName: 'Stark Industries', 
               employees: '20000', 
               location: 'New York', 
               grossRevenue: '1,200,000,000',
-              projects_id: branches[0]
+              company_id: branches[0]
             }
           ])
         })
