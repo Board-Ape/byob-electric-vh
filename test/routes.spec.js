@@ -9,7 +9,7 @@ const knex = require('../db/knex.js')
 chai.use(chaiHttp);
 
 describe('Client Side Routes', () => {
-  it.skip('Should return the home page', () => {
+  it('Should return the home page', () => {
     return chai.request(server)
     .get('/')
     .then(response => {
@@ -18,6 +18,17 @@ describe('Client Side Routes', () => {
     })
     .catch(error => {
       return error
+    })
+  })
+
+  it('should return a 404 if the route doesnt exist', () => {
+    return chai.request(server)
+    .get('/notgood')
+    .then(response => {
+      response.should.have.status(404)
+    })
+    .catch(error => {
+      return error;
     })
   })
 })
