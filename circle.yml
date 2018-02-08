@@ -9,7 +9,7 @@ environment:
 
 database:
   override:
-    - sudo -u psql -p 5432 -c "create database companies_test;"
+    - sudo -u postgres psql -p 5432 -c "create database companies_test;"
     - knex migrate:latest
 
 test:
