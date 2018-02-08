@@ -13,7 +13,8 @@ machine:
     - knex migrate: latest
 
   test:
-    - mocha --exit
+    override:
+      - ./node_modules/.bin/mocha
 
   deployment:
     staging:
