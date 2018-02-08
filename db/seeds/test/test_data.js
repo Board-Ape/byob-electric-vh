@@ -19,15 +19,15 @@ exports.seed = function(knex, Promise) {
             {
               companyName: 'API Industries', 
               employees: '1200', 
-              location: 'New South Wales', 
+              branchName: 'New South', 
               grossRevenue: '1,200,000',
               company_id: branches[0]
             },
             {
-              companyName: 'Stark Industries', 
+              companyName: 'API Industries', 
               employees: '20000', 
-              location: 'New York', 
-              grossRevenue: '1,200,000,000',
+              branchName: 'Circle Group', 
+              grossRevenue: '1200000000',
               company_id: branches[0]
             }
           ])
