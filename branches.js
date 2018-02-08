@@ -2,259 +2,259 @@ module.exports = [
   {
     "companyName": "ZB Homes (BOP)",
     "employees": "93905",
-    "location": "Waikato and Central North Island",
-    "grossRevenue": "1583%"
+    "branchName": "Mapleton",
+    "grossRevenue": "123435"
   },
   {
     "companyName": "Moola.co.nz",
     "employees": "79503",
-    "location": "Canterbury and Upper South Island",
-    "grossRevenue": "1013%"
+    "branchName": "Uniborn",
+    "grossRevenue": "76564"
   },
   {
     "companyName": "Crimson Education",
     "employees": "21300",
-    "location": "Auckland and Upper North Island",
-    "grossRevenue": "1005%"
+    "branchName": "Boujie",
+    "grossRevenue": "94568"
   },
   {
     "companyName": "Pushpay",
     "employees": "67045",
-    "location": "Auckland and Upper North Island",
-    "grossRevenue": "914%"
+    "branchName": "Teller",
+    "grossRevenue": "3456"
   },
   {
     "companyName": "Carus Group",
     "employees": "50493",
-    "location": "Canterbury and Upper South Island",
-    "grossRevenue": "718%"
+    "branchName": "Marble",
+    "grossRevenue": "718456"
   },
   {
     "companyName": "The Career Academy",
     "employees": "90056",
-    "location": "Auckland and Upper North Island",
-    "grossRevenue": "678%"
+    "branchName": "Gainsville",
+    "grossRevenue": "454596"
   },
   {
     "companyName": "StretchSense",
     "employees": "64035",
-    "location": "Auckland and Upper North Island",
-    "grossRevenue": "554%"
+    "branchName": "Probablity Overlowa",
+    "grossRevenue": "3465049"
   },
   {
     "companyName": "Turbo Staff",
     "employees": "6904",
-    "location": "Canterbury and Upper South Island",
-    "grossRevenue": "534%"
+    "branchName": "Deterministic",
+    "grossRevenue": "9504906"
   },
   {
     "companyName": "Nurtured at Home",
     "employees":  "35609",
-    "location": "Waikato and Central North Island",
-    "grossRevenue": "480%"
+    "branchName": "Phoramix",
+    "grossRevenue": "44560"
   },
   {
     "companyName": "Blue River Dairy LP",
     "employees": "50693",
-    "location": "Otago and Southland",
-    "grossRevenue": "445%"
+    "branchName": "Simile",
+    "grossRevenue": "44456"
   },
   {
     "companyName": "Tower Cranes NZ",
     "employees": "34695",
-    "location": "Auckland and Upper North Island",
-    "grossRevenue": "435%"
+    "branchName": "Wasterbase",
+    "grossRevenue": "435945"
   },
   {
     "companyName": "API Talent",
     "employees": "32094",
-    "location": "Wellington and Lower North Island",
-    "grossRevenue": "408%"
+    "branchName": "Superteli",
+    "grossRevenue": "40832"
   },
   {
     "companyName": "New Y Trading",
     "employees": "10355",
-    "location": "Auckland and Upper North Island",
-    "grossRevenue": "391%"
+    "branchName": "Indigo",
+    "grossRevenue": "391123"
   },
   {
     "companyName": "Tenco EBS",
     "employees": "2045",
-    "location": "Canterbury and Upper South Island",
-    "grossRevenue": "381%"
+    "branchName": "Gourst",
+    "grossRevenue": "381123"
   },
   {
     "companyName": "Timely",
     "employees": "950483",
-    "location": "Otago and Southland",
-    "grossRevenue": "379%"
+    "branchName": "Ophamology",
+    "grossRevenue": "3420599"
   },
   {
     "companyName": "Inde",
     "employees": "9603",
-    "location": "Canterbury and Upper South Island",
-    "grossRevenue": "377%"
+    "branchName": "Tarregon",
+    "grossRevenue": "345203"
   },
   {
     "companyName": "90 Seconds",
     "employees": "7590",
-    "location": "Auckland and Upper North Island",
-    "grossRevenue": "357%"
+    "branchName": "Datasick",
+    "grossRevenue": "345034"
   },
   {
     "companyName": "Roam Creative",
     "employees": "2340",
-    "location": "Auckland and Upper North Island",
-    "grossRevenue": "354%"
+    "branchName": "Makeshift Happen",
+    "grossRevenue": "32450390"
   },
   {
     "companyName": "Shuttlerock",
     "employees": "2043",
-    "location": "Auckland and Upper North Island",
-    "grossRevenue": "349%"
+    "branchName": "Zero Phone",
+    "grossRevenue": "234095"
   },
   {
     "companyName": "Pacific Edge",
     "employees": "60530",
-    "location": "Otago and Southland",
-    "grossRevenue": "324%"
+    "branchName": "Supplettal",
+    "grossRevenue": "23045"
   },
   {
     "companyName": "FaceMe",
     "employees": "90784",
-    "location": "Auckland and Upper North Island",
-    "grossRevenue": "317%"
+    "branchName": "Marvelatic",
+    "grossRevenue": "435834"
   },
   {
     "companyName": "Snap Rentals",
     "employees": "43950",
-    "location": "Auckland and Upper North Island",
-    "grossRevenue": "315%"
+    "branchName": "Loquacious",
+    "grossRevenue": "209534"
   },
   {
     "companyName": "New Zealand Health Manufacturing",
     "employees": "34534",
-    "location": "Auckland and Upper North Island",
-    "grossRevenue": "314%"
+    "branchName": "Condicone",
+    "grossRevenue": "34520"
   },
   {
     "companyName": "Spotlight Reporting",
     "employees": "7650",
-    "location": "Wellington and Lower North Island",
-    "grossRevenue": "300%"
+    "branchName": "Scient",
+    "grossRevenue": "234509"
   },
   {
     "companyName": "Rabid Technologies",
     "employees": "6708",
-    "location": "Wellington and Lower North Island",
-    "grossRevenue": "300%"
+    "branchName": "Delton",
+    "grossRevenue": "234589340"
   },
   {
     "companyName": "Raw Material",
     "employees": "216070",
-    "location": "Wellington and Lower North Island",
-    "grossRevenue": "287%"
+    "branchName": "Sicily",
+    "grossRevenue": "983475"
   },
   {
     "companyName": "Acquire Online",
     "employees": "340964",
-    "location": "Auckland and Upper North Island",
-    "grossRevenue": "272%"
+    "branchName": "Morpher",
+    "grossRevenue": "90528"
   },
   {
     "companyName": "Protempo",
     "employees": "98120",
-    "location": "Auckland and Upper North Island",
-    "grossRevenue": "242%"
+    "branchName": "Turbo",
+    "grossRevenue": "24095"
   },
   {
     "companyName": "Spotlight Reporting",
     "employees": "92743",
-    "location": "Auckland and Upper North Island",
-    "grossRevenue": "234%"
+    "branchName": "Proctor",
+    "grossRevenue": "234590"
   },
   {
     "companyName": "Spotlight Reporting",
     "employees": "34298",
-    "location": "Auckland and Upper North Island",
-    "grossRevenue": "232%"
+    "branchName": "Masochist",
+    "grossRevenue": "13485"
   },
   {
     "companyName": "Rabid Technologies",
     "employees": "150933",
-    "location": "Auckland and Upper North Island",
-    "grossRevenue": "232%"
+    "branchName": "Turbulent",
+    "grossRevenue": "9283450"
   },
   {
     "companyName": "Rabid Technologies",
     "employees": "4984",
-    "location": "Auckland and Upper North Island",
-    "grossRevenue": "232%"
+    "branchName": "Latent",
+    "grossRevenue": "153409"
   },
   {
     "companyName": "Raw Material",
     "employees": "9473",
-    "location": "Auckland and Upper North Island",
-    "grossRevenue": "232%"
+    "branchName": "Mako",
+    "grossRevenue": "1445304"
   },
   {
     "companyName": "Raw Material",
     "employees": "5134",
-    "location": "Auckland and Upper North Island",
-    "grossRevenue": "232%"
+    "branchName": "Suceed",
+    "grossRevenue": "209445"
   },
   {
     "companyName": "Acquire Online",
     "employees": "7435",
-    "location": "Auckland and Upper North Island",
-    "grossRevenue": "232%"
+    "branchName": "Mogulle",
+    "grossRevenue": "456093"
   },
   {
     "companyName": "Acquire Online",
     "employees": "12134",
-    "location": "Auckland and Upper North Island",
-    "grossRevenue": "232%"
+    "branchName": "Proglam",
+    "grossRevenue": "45960"
   },
   {
     "companyName": "Acquire Online",
     "employees": "2134",
-    "location": "Auckland and Upper North Island",
-    "grossRevenue": "232%"
+    "branchName": "Cosiger",
+    "grossRevenue": "59034"
   },
   {
     "companyName": "Protempo",
     "employees": "214",
-    "location": "Auckland and Upper North Island",
-    "grossRevenue": "232%"
+    "branchName": "Commert",
+    "grossRevenue": "435906"
   },
   {
     "companyName": "Teknique",
     "employees": "134",
-    "location": "Auckland and Upper North Island",
-    "grossRevenue": "232%"
+    "branchName": "Torrence Pale",
+    "grossRevenue": "3490354"
   },
   {
     "companyName": "Teknique",
     "employees": "98745",
-    "location": "Auckland and Upper North Island",
-    "grossRevenue": "232%"
+    "branchName": "Morrison",
+    "grossRevenue": "439560"
   },
   {
     "companyName": "Ecoware",
     "employees": "32134",
-    "location": "Auckland and Upper North Island",
-    "grossRevenue": "232%"
+    "branchName": "Janeson",
+    "grossRevenue": "4594603"
   },
   {
     "companyName": "Ecoware",
     "employees": "35134",
-    "location": "Auckland and Upper North Island",
-    "grossRevenue": "232%"
+    "branchName": "Auckland",
+    "grossRevenue": "904245"
   },
   {
     "companyName": "Ecoware",
     "employees": "9343",
-    "location": "Auckland and Upper North Island",
-    "grossRevenue": "232%"
+    "branchName": "Upper Island",
+    "grossRevenue": "453775"
   }
 ]

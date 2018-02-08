@@ -13,7 +13,7 @@ exports.up = (knex, Promise) => {
       table.increments('id').primary();
       table.string('companyName');
       table.string('employees');
-      table.string('location');
+      table.string('branchName');
       table.string('grossRevenue');
       table.integer('company_id').unsigned();
       table.foreign('company_id').references('topcompanies.id');
