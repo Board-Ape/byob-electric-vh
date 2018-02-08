@@ -17,7 +17,7 @@ const createCompany = (knex, companyTitle) => {
         companyArray.push(createBranch(knex, {
           companyName: JSON.stringify(filteredBranches.companyName),
           employees: JSON.stringify(filteredBranches.employees),
-          location: JSON.stringify(filteredBranches.location),
+          branchName: JSON.stringify(filteredBranches.branchName),
           grossRevenue: JSON.stringify(filteredBranches.grossRevenue),
           company_id: branchID[0]
         }));
