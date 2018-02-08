@@ -23,9 +23,7 @@ const requireHTTPS = (request, response, next) => {
 app.set('secretKey', 'lysergic');
 
 const checkAuthorization = (request, response, next) => {
-  let token = request.headers.authorization ||
-              request.body.token ||
-              request.query.token;
+  let token = request.headers.authorization
 
   if (!token) {
     return response.status(403).json(
@@ -55,14 +53,11 @@ app.post('/api/v1/authenticate', (request, response) => {
   }
 
   verify = email.endsWith('@turing.io');
-  token = jwt.sign(request.body, app.get('secretKey'));
 
-  if (verify) {
-    user = Object.assign({}, request.body, { admin: true, token });
-  } else {
-    user = Object.assign({}, request.body, { admin: false, token });
-  }
-  return response.status(201).json({ user });
+  verify ? request.body.admin = true : request.body.admin = false;
+
+  token = jwt.sign(request.body, app.get('secretKey'));
+  return response.status(201).json({ token });
 });
 
 app.get('/', (request, response) => {
@@ -146,7 +141,7 @@ app.get('/api/v1/companies/', (request, response) => {
     })
 });
 
-app.patch('/api/v1/companies/:id', (request, response) => {
+app.patch('/api/v1/companies/:id', checkAuthorization, (request, response) => {
   database('topcompanies')
     .where({id: request.params.id})
     .update(request.body, '')
@@ -162,7 +157,7 @@ app.patch('/api/v1/companies/:id', (request, response) => {
     });
 });
 
-app.patch('/api/v1/branches/:id', (request, response) => {
+app.patch('/api/v1/branches/:id', checkAuthorization, (request, response) => {
   database('branches')
     .where({company_id: request.params.id})
     .update(request.body, '')
@@ -200,7 +195,7 @@ app.get('/api/v1/companies/:id', (request, response) => {
     });
 });
 
-app.delete('/api/v1/branches/:id', (request, response) => {
+app.delete('/api/v1/branches/:id', checkAuthorization, (request, response) => {
   const {id} = request.params;
   database('branches').where({id}).del()
     .then(branch => {
@@ -214,7 +209,7 @@ app.delete('/api/v1/branches/:id', (request, response) => {
 });
 
 
-app.delete('/api/v1/companies/:id', (request, response) => {
+app.delete('/api/v1/companies/:id', checkAuthorization, (request, response) => {
   const {id} = request.params;
   database('topcompanies').where({id}).del()
     .then(companies => {
