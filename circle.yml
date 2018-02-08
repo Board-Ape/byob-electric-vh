@@ -7,3 +7,16 @@ machine:
 
   environment:
     DATABASE_URL: postgresql://@127.0.0.1:5432/companies_test
+
+  database:
+    - sudo -u psql -p 5432 -c "create database companies_test;"
+    - knex migrate: latest
+
+  test:
+    - mocha --exit
+
+  deployment:
+    staging:
+      branch: master
+      heroku:
+        appname: byob-top-companies
