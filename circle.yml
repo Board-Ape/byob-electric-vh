@@ -1,23 +1,23 @@
 machine:
   timezone:
     America/Denver
-
   node:
     version: 8.1.2
 
-  environment:
-    DATABASE_URL: postgresql://@127.0.0.1:5432/companies_test
+environment:
+  DATABASE_URL: postgresql://@127.0.0.1:5432/companies_test
 
-  database:
+database:
+  override:
     - sudo -u psql -p 5432 -c "create database companies_test;"
-    - knex migrate: latest
+    - knex migrate:latest
 
-  test:
-    override:
-      - ./node_modules/.bin/mocha
+test:
+  override:
+    - npm test
 
-  deployment:
-    staging:
-      branch: master
-      heroku:
-        appname: byob-top-companies
+deployment:
+  staging:
+    branch: master
+    heroku:
+      appname: byob-top-companies
