@@ -106,7 +106,7 @@ app.post('/api/v1/companies', (request, response) => {
 // company_id in Postman does not populate, does the frontend user side create that?
 app.post('/api/v1/branches', (request, response) => {
   const branch = request.body;
-  for (let requiredParameters of ["companyName", "employees", "location", "grossRevenue"]) {
+  for (let requiredParameters of ["companyName", "employees", "branchName", "grossRevenue"]) {
     if (!branch[requiredParameters]) {
       return response.status(422).json({
         error: `You are missing a required field ${requiredParameters}`
@@ -122,7 +122,8 @@ app.post('/api/v1/branches', (request, response) => {
     });
 });
 
-app.get('/api/v1/companies/', (request, response) => {
+// API GET Query company by specific industry 
+app.get('/api/v1/companies/show/', (request, response) => {
   const { industry } = request.query;
 
   if (!industry) {
@@ -131,15 +132,15 @@ app.get('/api/v1/companies/', (request, response) => {
 
   database('topcompanies').where('industry', industry).select()
     .then(companyName => {
-      if (companyName[0]) {
-        return response.status(200).json({ companyName: companyName[0] });;
+      if (companyName) {
+        return response.status(200).json({ companyName: companyName });
       } else {
-        return response.status(404).json({ error: `No companyName with industry of ${industry} was found.`})
+        return response.status(404).json({ error: `No companyName with an industry of ${industry} was found.`});
       }
     })
     .catch(error => {
       return response.status(500).json({ error });
-    })
+    });
 });
 
 app.patch('/api/v1/companies/:id', checkAuthorization, (request, response) => {
