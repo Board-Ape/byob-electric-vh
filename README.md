@@ -1,5 +1,7 @@
 ### Top-Companies Documentation
 
+##### Built by Samuel Singer and Pat Neel
+
 #### GET API Endpoints
 
 `/api/v1/companies`
