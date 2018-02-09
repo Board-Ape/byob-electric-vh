@@ -48,6 +48,17 @@ describe('API Routes', () => {
       });
   });
 
+  it('should have a five hundred error status code if unssuccessful', () => {
+    return chai.request(server)
+    .get('/api/v1/corgisaregreat')
+    .then(response => {
+    })
+    .catch(response => {
+      response.status.have.status(500)  
+      
+    })
+  })
+
   it('should get all the branches', () => {
     return chai.request(server)
       .get('/api/v1/branches')
@@ -61,4 +72,26 @@ describe('API Routes', () => {
         return error;
       });
   });
+
+  it('should post a new company', () => {
+    return chai.request(server)
+    .post('/api/v1/companies')
+    .send({
+      companyName: 'Stark Industries',
+      industry: 'weapons',
+      location: 'New York',
+      revenueGrowth: '12300000'
+    })
+    .then(response => {
+      response.should.have.status(201)
+      response.body.should.be.a('object')
+      response.body.should.have.property('companyName')
+      response.body.should.have.property('industry')
+      response.body.should.have.property('location')
+      response.body.should.have.property('revenueGrowth')
+    })
+    .catch(error => {
+      return error;
+    })
+  })
 });
