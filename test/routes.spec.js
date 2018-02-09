@@ -50,7 +50,7 @@ describe('API Routes', () => {
 
   it('should have a four hundred hundred error status code if unssuccessful', () => {
     return chai.request(server)
-    .get('/api/v1/comddanies')
+    .get('/api/v1/comdd')
     .then(response => {
     })
     .catch(response => {
@@ -163,6 +163,21 @@ describe('API Routes', () => {
     })
   })
 
+  it('should return an error message if missing required parameter', () => {
+      return chai.request(server)
+        .post('/api/v1/companies')
+        .send({
+          name: 'New Company'
+        })
+        .then(response => {
+        })
+        .catch(error => {
+          error.response.should.have.status(422);
+          error.response.body.should.be.a('object');
+         
+        })
+    });
+
   it('should post a new branch', () => {
     return chai.request(server)
     .post('/api/v1/branches')
@@ -180,6 +195,20 @@ describe('API Routes', () => {
       return error;
     })
   })
+
+  it('should return an error message if missing required parameter', () => {
+      return chai.request(server)
+        .post('/api/v1/companies')
+        .send({
+          local: 'Jesresy'
+        })
+        .then(response => {
+        })
+        .catch(error => {
+          error.response.should.have.status(422);
+          error.response.body.should.be.a('object');
+        })
+    });
 
   it('should make a patch for a company', () => {
     return chai.request(server)
