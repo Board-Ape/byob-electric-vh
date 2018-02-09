@@ -24,7 +24,7 @@ const requireHTTPS = (request, response, next) => {
 app.set('secretKey', 'lysergic');
 
 const checkAuthorization = (request, response, next) => {
-  let token = request.headers.authorization
+  let token = request.headers.authorization;
 
   if (!token) {
     return response.status(403).json(
@@ -225,7 +225,7 @@ app.delete('/api/v1/companies/:id', checkAuthorization, (request, response) => {
 });
 
 app.listen(app.get('port'), () => {
-  console.log(`${app.locals.title} is running on ${app.get("port")}.`)
+  console.log(`${app.locals.title} is running on ${app.get("port")}.`);
 });
 
 module.exports = app;
