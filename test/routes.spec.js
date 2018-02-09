@@ -152,4 +152,34 @@ describe('API Routes', () => {
       })
   })
 
+  it('should make a patch for a branch', () => {
+    return chai.request(server)
+      .post('v1/api/branches')
+      .send({
+      companyName: 'WorkHorse',
+      employees: '123',
+      branchName: 'Dogs',
+      grossRevenue: '12',
+      revenueGrowth: '12300000',
+      company_id: 1
+    })
+      .then(response => {
+        return response.body.id
+      })
+      .then(id => {
+        return chai.request(server)
+        .patch('/api/v1/branches/:id')
+        .send({
+          employees: '5000'
+        })
+        .then(response => {
+          response.should.have.status(201)
+          response.body.should.be('object')
+        })
+      })
+      .catch(error => {
+        return error;
+      })
+  })
+
 });
