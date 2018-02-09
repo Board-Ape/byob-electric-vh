@@ -1,6 +1,6 @@
 ### Top-Companies Documentation
 
-#### Get API Endpoints
+#### GET API Endpoints
 
 `/api/v1/companies`
 ```json
@@ -65,11 +65,11 @@
 }
 ```
 
-#### Post API Endpoints
+#### POST API Endpoints
 
 `/api/v1/companies`
 
-##### required parameters
+##### Required Parameters
 
 ##### companyName string REQUIRED. The name of the cmpany
 ##### industry string REQUIRED. The industry of the company
@@ -78,9 +78,31 @@
 
 `/api/v1/branches`
 
-#### required Parameters
+#### Required Parameters
 
 ##### companyName string REQUIRED. The name of the cmpany
 ##### employees string REQUIRED. The number of employees for the company
 ##### branchName string REQUIRED. The branch name of the company.
 ##### grossRevenue string REQUIRED. The the gross revenue for the company.
+
+#### PATCH API Endpoints
+
+`/api/v1/companies`
+
+##### request parameter id that the user is updating to
+
+
+`/api/v1/branches`
+
+##### request parameter id that the user is updating to
+
+#### DELETE API Endpoints
+
+`/api/v1/branches`
+
+##### request parameter id that the user is deleting to
+
+`/api/v1/companies`
+
+##### request parameter id that the user is deleting to
+
