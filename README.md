@@ -1,6 +1,6 @@
 ### Top-Companies Documentation
 
-#### Get API Endpints
+#### Get API Endpoints
 
 `/api/v1/companies`
 ```json
@@ -64,3 +64,23 @@
   }
 }
 ```
+
+#### Post API Endpoints
+
+`/api/v1/companies`
+
+##### required parameters
+
+##### companyName string REQUIRED. The name of the cmpany
+##### industry string REQUIRED. The industry of the company
+##### location string REQUIRED. The location of the company.
+##### revenueGrowth string REQUIRED. The revenue growth for the company.
+
+`/api/v1/branches`
+
+#### required Parameters
+
+##### companyName string REQUIRED. The name of the cmpany
+##### employees string REQUIRED. The number of employees for the company
+##### branchName string REQUIRED. The branch name of the company.
+##### grossRevenue string REQUIRED. The the gross revenue for the company.
