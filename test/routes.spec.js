@@ -182,4 +182,30 @@ describe('API Routes', () => {
       })
   })
 
+  it('should delete a branch', () => {
+    return chai.request(server)
+    .post('/api/v1/branches')
+    .send({
+      companyName: 'WorkHorse',
+      employees: '123',
+      branchName: 'Dogs',
+      grossRevenue: '12',
+      revenueGrowth: '12300000',
+      company_id: 1
+    })
+    .then(response => {
+      return response.body.id
+    })
+    .then(id => {
+      return chai.request(server)
+      .delete(`/api/v1/branches/${id}`)
+      .then(response => {
+        response.should.have.status(204)
+      })
+    })
+    .catch(error => {
+      return error;
+    })
+  })
+
 });
