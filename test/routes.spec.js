@@ -48,13 +48,13 @@ describe('API Routes', () => {
       });
   });
 
-  it('should have a five hundred error status code if unssuccessful', () => {
+  it('should have a four hundred hundred error status code if unssuccessful', () => {
     return chai.request(server)
-    .get('/api/v1/corgisaregreat')
+    .get('/api/v1/comddanies')
     .then(response => {
     })
     .catch(response => {
-      response.status.have.status(500)  
+      response.status.have.status(404)  
       
     })
   })
@@ -72,6 +72,17 @@ describe('API Routes', () => {
         return error;
       });
   });
+
+  it('should have a four hundred hundred error status code if unssuccessful', () => {
+    return chai.request(server)
+    .get('/api/v1/branchessss')
+    .then(response => {
+    })
+    .catch(response => {
+      response.status.have.status(404)  
+      
+    })
+  })
 
   it('should get the companies by specifiec query parameter', () => {
     return chai.request(server)
