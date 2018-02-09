@@ -84,6 +84,52 @@ describe('API Routes', () => {
     })
   })
 
+  it('should get a company by an id', () => {
+    return chai.request(server)
+    .get('api/v1/companies')
+    .then(response => {
+      return response.body.branches[0].id;
+    })
+    .then(id => {
+      return chai.request(server)
+      .get(`/api/v1/companies/${id}`)
+      .then(response => {
+        response.should.have.status(200)
+        response.should.be.json;
+        response.body.companies[0].should.have.property('companyName')
+        response.body.companies[0].should.have.property('industry')
+        response.body.companies[0].should.have.property('location')
+        response.body.companies[0].should.have.property('revenueGrowth')
+      })
+    })
+    .catch(error => {
+      return error;
+    })
+  })
+
+  it('should get a branch by an id', () => {
+    return chai.request(server)
+    .get('api/v1/branches')
+    .then(response => {
+      return response.body.branches[0].id;
+    })
+    .then(id => {
+      return chai.request(server)
+      .get(`/api/v1/branches/${id}`)
+      .then(response => {
+        response.should.have.status(200)
+        response.should.be.json;
+        response.body.companies[0].should.have.property('companyName')
+        response.body.companies[0].should.have.property('employees')
+        response.body.companies[0].should.have.property('branchName')
+        response.body.companies[0].should.have.property('grossRevenue')
+      })
+    })
+    .catch(error => {
+      return error;
+    })
+  })
+
   it('should post a new company', () => {
     return chai.request(server)
     .post('/api/v1/companies')
