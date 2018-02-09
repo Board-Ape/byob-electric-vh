@@ -73,6 +73,17 @@ describe('API Routes', () => {
       });
   });
 
+  it('should get the companies by specifiec query parameter', () => {
+    return chai.request(server)
+    .get('/api/v1/companies/show/?industry=technology')
+    .then(response => {
+      response.should.be.json;
+    })
+    .catch(error => {
+      return error;
+    })
+  })
+
   it('should post a new company', () => {
     return chai.request(server)
     .post('/api/v1/companies')
@@ -94,4 +105,51 @@ describe('API Routes', () => {
       return error;
     })
   })
+
+  it('should post a new branch', () => {
+    return chai.request(server)
+    .post('/api/v1/branches')
+    .send({
+      companyName: 'WorkHorse',
+      employees: '123',
+      branchName: 'Dogs',
+      grossRevenue: '12'
+    })
+    .then(response => {
+      response.should.have.a.status(201);
+      response.should.be.json;
+    })
+    .catch(error => {
+      return error;
+    })
+  })
+
+  it('should make a patch for a company', () => {
+    return chai.request(server)
+      .post('v1/api/companies')
+      .send({
+      companyName: 'Stark Industries',
+      industry: 'weapons',
+      location: 'New York',
+      revenueGrowth: '12300000'
+    })
+      .then(response => {
+        return response.body.id
+      })
+      .then(id => {
+        return chai.request(server)
+        .patch('/api/v1/companies/:id')
+        .send({
+          industry: 'movies'
+        })
+        .then(response => {
+          response.should.have.status(201)
+          response.body.should.be('object')
+        })
+      })
+      .catch(error => {
+        return error;
+      })
+  })
+
 });
